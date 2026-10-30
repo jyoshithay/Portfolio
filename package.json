@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "csso assets/css/styles.css -o assets/css/styles.min.css",
+    "build:js": "terser assets/js/app.js -c -m --toplevel -o assets/js/app.min.js"
+  },
+  "devDependencies": {
+    "csso-cli": "^4.0.2",
+    "terser": "^5.36.0"
+  }
+}
